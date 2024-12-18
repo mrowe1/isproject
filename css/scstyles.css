@@ -1,0 +1,272 @@
+/* Reset and Base Styles */
+html {
+    scroll-padding-top: 100px; /* Adjust this value to match or slightly exceed your header height */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0F0F0F; /* Darker background */
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Common Section Styling */
+.common {
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 2;
+    background-color: #1A1A1A;
+    padding: 0;
+    border-bottom: 2px solid #00A8E8; /* McLaren Blue */
+    margin-bottom: 15px; /* Header is a total of 79px including margin */
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+    background-color: #00A8E8; /* McLaren Blue */
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #4bc5f6; /* Lighter Blue */
+}
+
+.nav-button::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #808080; /* Gray color */
+    margin-right: 10px;
+}
+
+.header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    top: 15px;
+    color: #00A8E8; /* McLaren Blue */
+}
+
+/* Left and Right Menus */
+.leftmenu, .rightmenu {
+    position: fixed;
+    top: 65px;
+    background-color: #1A1A1A;
+    width: 200px;
+    bottom: 0px;
+    padding: 20px;
+    z-index: 1;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.leftmenu {
+    left: 0;
+    border-radius: 0px 10px 0px 0px; 
+}
+
+.rightmenu {
+    right: 0;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.leftmenu h3, .rightmenu h3 {
+    color: #00A8E8;
+    margin-bottom: 10px;
+}
+
+.leftmenu ul, .rightmenu ul {
+    list-style-type: none;
+}
+
+.leftmenu ul li, .rightmenu ul li {
+    margin-bottom: 10px;
+}
+
+/* Main Body */
+.mainbody {
+    flex: 1;
+    margin: 100px 220px 60px;
+    padding: 30px;
+    margin-top: 80px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 128, 0, 0.1);
+}
+
+/* Footer Section */
+.footer {
+    position: bottom;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    font-size: 14px;
+    color: #AAAAAA;
+    text-align: center;
+    padding: 10px;
+    background-color: #1A1A1A;
+}
+
+/* Links and Buttons */
+a {
+    color: #00A8E8; /* McLaren Blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF8000;
+}
+
+button {
+    background-color: #00A8E8;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9933;
+}
+
+button:focus {
+    outline: 2px solid #00A8E8;
+}
+
+/* Headings and Divider */
+h1, h2, h3 {
+    color: #00A8E8;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #333333;
+    margin: 20px 0;
+}
+
+/* Image Styling */
+.logo {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+.toppic {
+    padding-bottom: 0px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 20px rgba(255, 128, 0, 0.1);
+}
+
+/* List Styling */
+ol, ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* iframe (YouTube Video) Styling */
+iframe {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .mainbody {
+        margin: 100px 20px 60px;
+    }
+
+    .leftmenu, .rightmenu {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .leftmenu, .rightmenu {
+        display: none;
+    }
+
+    .mainbody {
+        margin: 100px 20px 60px;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-button {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .header h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.bodypic{
+    width: 500px;
+    border: #0F0F0F solid 1px;
+    box-shadow: 0 0 20px rgba(255, 128, 0, 0.1);
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.iframe{
+    box-shadow: 0 0 20px rgba(255, 128, 0, 0.1);
+}
+
+.anchor{
+    position: relative;
+    margin-top: 300px;
+  }
